@@ -1,18 +1,18 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Windows;
+﻿using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
-using System.IO;
+using UnityEngine;
 
-public class TracerGlobal {
+public class TracerGlobal
+{
     // Singleton related
     private static TracerGlobal _singleton;
 
     public static TracerGlobal Instance
     {
-        get {
+        get
+        {
             if (_singleton == null)
             {
                 _singleton = new TracerGlobal();
