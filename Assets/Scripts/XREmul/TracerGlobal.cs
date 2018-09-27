@@ -57,13 +57,17 @@ public class TracerGlobal {
         {
             string filename = kv.Key;
             List<LogEntry> logs = kv.Value;
-            
-            UnityEngine.Windows.File.WriteAllBytes(
-                Path.Combine(Application.dataPath, filename + ".log"),
-                Encoding.UTF8.GetBytes(
-                    logs
-                    .Select(log => log.ToString())
-                    .Aggregate((left, right) => left + "\n" + right)));
+
+            var path = Path.Combine(Application.dataPath, filename + ".log");
+
+            using (StreamWriter writer = new StreamWriter(path, false))
+            {
+                writer.Write(
+                    Encoding.UTF8.GetBytes(
+                        logs
+                        .Select(log => log.ToString())
+                        .Aggregate((left, right) => left + "\n" + right)));
+            }
         }
     }
 }
