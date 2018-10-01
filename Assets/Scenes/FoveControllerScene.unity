@@ -194,7 +194,7 @@ GameObject:
   m_PrefabParentObject: {fileID: 1000010938986662, guid: 042142d01b081ab4ca555ec74a04c2cb,
     type: 2}
   m_PrefabInternal: {fileID: 1425378993}
---- !u!114 &1570418237
+--- !u!114 &1570418240
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -205,3 +205,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa094cd378da73a4a97e265ae6be8113, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsRecording: 1
